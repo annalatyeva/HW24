@@ -1,0 +1,80 @@
+.WordCardConteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40vw;
+    margin: 20px auto;
+}
+
+.word-card {
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 0px 0px 15px;
+    font-family: var(--contentFont);
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px var(--darkBlue) solid;
+    border-radius: 5px;
+    box-shadow: 10px 11px 8px 2px var(--boxShadowColor);
+}
+
+.word-type {
+    float: right;
+    width: min-content;
+    padding: 15px 15px 0px;
+}
+
+.word-type a {
+    font-weight: 600;
+    color: var(--darkBlue);
+    text-decoration: none;
+    width: min-content;
+}
+
+.word-type a::after {
+    display: block;
+    content: "";
+    height: 1px; 
+    width: 0%; 
+    background-color: var(--darkBlue);
+    transition: width 0.4s ease-in-out; 
+}
+
+.word-type a:focus::after, .word-type a:hover::after {
+    width: 100%;
+}
+
+.word-style {
+    font-size: 1.7rem;
+    margin: 70px 0px 20px;
+}
+
+.transcription-style {
+    margin-bottom: 5px;
+}
+
+.button-conteiner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-conteiner button {
+    font-family: var(--systemFont);
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 15px 0px;
+    width: 31%;
+}
+
+.know-button {
+    background-color: rgb(152, 238, 204);
+}
+
+.edit-word-button {
+    background-color:var(--yellow);
+}
+
+.dont-know-button {
+    background-color: var(--blue);
+}

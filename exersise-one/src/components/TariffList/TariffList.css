@@ -1,0 +1,98 @@
+.dark-blue {
+    background-color: rgb(34,156,171);
+}
+.light-blue {
+    background-color: rgb(44,193,213);
+}
+.dark-green {
+    background-color: rgb(36,135,114);
+}
+.light-green {
+    background-color: rgb(36,174,141);
+}
+.dark-red {
+    background-color: rgb(196,85,78);
+}
+.light-red {
+    background-color: rgb(244,106,95);
+}
+.dark-black {
+    background-color: rgb(40,47,55);
+}
+.light-black {
+    background-color: rgb(51,58,68);
+}
+
+.TariffList {
+    display: flex;
+    align-items: center;
+    /* grid-template-columns: repeat(4, 1fr); */
+    max-width: 48vw;
+    margin: 40px auto;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+.TariffListItem {
+    margin-right: 2px;
+}
+
+.TariffList p {
+    margin: 0;
+    
+}
+
+.title {
+    margin-bottom: 1px;
+    padding: 15px;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.TariffListItem:has(> .selected) {
+    box-shadow: -4px 4px 8px 0px rgba(34, 60, 80, 0.3);
+}
+
+.selected{
+    padding-top: 22px;
+    padding-bottom: 20px;
+}
+
+.price-box {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 37px 0px 27px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+.price-box p:first-child {
+    padding-top: 5px;
+}
+
+.price-box p:last-child {
+    align-self: flex-end;
+    padding-bottom: 10px;
+}
+
+.price {
+    padding: 0px 5px;
+    font-size: 3rem;
+}
+
+.speed {
+    padding: 16px;
+    font-size: 0.9rem;
+    letter-spacing: -0.5px;
+    background-color: rgb(248,248,248);
+}
+
+.info {
+    padding: 16px;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    background-color: rgb(238,238,238);
+}
+
