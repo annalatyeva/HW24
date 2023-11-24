@@ -46,8 +46,6 @@ nav ul li a::after, .footer-nav ul li a::after {
     }
 
 nav ul li a:hover::after, 
-nav ul li a:focus::after, 
-.footer-nav ul li a:hover::after, 
-.footer-nav ul li a:focus::after {
+.footer-nav ul li a:hover::after {
 width: 100%;
 }

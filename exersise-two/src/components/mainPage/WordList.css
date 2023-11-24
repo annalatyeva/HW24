@@ -1,8 +1,8 @@
 table {
     width: 70vw;
     margin: 7px auto;
-
     font-size: 1.1rem;
+    text-align: center;
     border: 1px solid grey;
     border-collapse: collapse;
 }
@@ -18,8 +18,8 @@ th {
 }
 
 td {
+    width: 30%;
     font-family: var(--contentFont);
-    padding: 5px;
     border: 1px solid grey;
 }
 
@@ -56,8 +56,8 @@ button:active {
 
 td input {
     padding: 0;
-    width: 98%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     font-family: var(--contentFont);
     font-size: 1.1rem;
     text-align: center;

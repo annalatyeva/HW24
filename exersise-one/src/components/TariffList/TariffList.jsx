@@ -1,20 +1,47 @@
 import {TariffListData} from "./TariffListData.js"
-import TariffListItem from "./TariffListItem.jsx";
+import { useState } from 'react';
 import './TariffList.css';
 
 
 function TariffList() {
+    const [tariffs, setTariff] = useState(TariffListData);
+
+    function handleClick(index) {
+        const nextTariffs = tariffs.map((tariff, i) => {
+            if (i === index) {
+              return {
+                ...tariff,
+                selected: !tariff.selected,
+            };
+            } else {
+                return {
+                  ...tariff,
+                selected: tariff.selected =false};
+            }
+        });
+        setTariff(nextTariffs);
+    }
+
+
     return (
         <div className="TariffList font">
-            {TariffListData.map((tariff) =>
-            <TariffListItem
-            fistBlockBackground={tariff.fistBlockBackground}
-            secondBlockBackground={tariff.secondBlockBackground} 
-            title={tariff.title} 
-            price={tariff.price} 
-            speed={tariff.speed}
-            selected={tariff.selected}>
-            </TariffListItem>
+            {tariffs.map((tariff, i) =>
+            (<div className="TariffListItem" onClick={() => {
+                handleClick(i);
+            }}
+            >
+                {tariff.selected 
+                    ? <div className={`title selected ${tariff.fistBlockBackground}`}>{tariff.title}</div>
+                    : <div className={`title ${tariff.fistBlockBackground}`}>{tariff.title}</div>} 
+            
+                <div className={`price-box ${tariff.secondBlockBackground}`}>
+                    <p>руб</p>
+                    <p className="price">{tariff.price}</p>
+                    <p>/мес</p>
+                </div>
+                <div className="speed">{tariff.speed}</div>
+                <div className="info">Объем включенного трафика не ограничен</div>
+            </div>)
             )}
         </div>
     );
