@@ -16,7 +16,7 @@ function TariffList() {
             } else {
                 return {
                   ...tariff,
-                selected: tariff.selected =false};
+                selected: tariff.selected = false};
             }
         });
         setTariff(nextTariffs);
