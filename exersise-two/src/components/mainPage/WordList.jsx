@@ -72,7 +72,7 @@ function WordList() {
                 <td>
                   <input
                     type="text"
-                    value={editedWords[i]?.english || word.english}
+                    defaultValue={editedWords[i]?.english || word.english}
                     onChange={(e) => {
                       const newEditedWords = [...editedWords];
                       newEditedWords[i] = {
@@ -86,7 +86,7 @@ function WordList() {
                 <td>
                   <input
                     type="text"
-                    value={editedWords[i]?.transcription || word.transcription}
+                    defaultValue={editedWords[i]?.transcription || word.transcription}
                     onChange={(e) => {
                       const newEditedWords = [...editedWords];
                       newEditedWords[i] = {
@@ -100,7 +100,7 @@ function WordList() {
                 <td>
                   <input
                     type="text"
-                    value={editedWords[i]?.russian || word.russian}
+                    defaultValue={editedWords[i]?.russian || word.russian}
                     onChange={(e) => {
                       const newEditedWords = [...editedWords];
                       newEditedWords[i] = {
